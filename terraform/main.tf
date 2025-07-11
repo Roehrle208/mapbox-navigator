@@ -1,5 +1,13 @@
 
 terraform {
+  backend "remote" {
+    organization = "roehrle208-cloud"
+
+    workspaces {
+      name = "mapbox-navigator"
+    }
+  }
+
   required_providers {
     github = {
       source  = "integrations/github"
@@ -8,14 +16,13 @@ terraform {
   }
 }
 
-
 provider "github" {
-  token = var.github_token
+  token = env.GITHUB_TOKEN
   owner = "Roehrle208"
 }
 
-resource "github_repository" "demo" {
-  name        = "terraform-demo-repo"
+resource "github_repository" "mapbox_repo" {
+  name        = "mapbox_navigator"
   description = "Ein Beispiel-Repo über Terraform erstellt"
   visibility  = "public"
 }
