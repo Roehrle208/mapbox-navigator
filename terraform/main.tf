@@ -17,7 +17,6 @@ terraform {
 }
 
 provider "github" {
-  token = env.GITHUB_TOKEN
   owner = "Roehrle208"
 }
 
