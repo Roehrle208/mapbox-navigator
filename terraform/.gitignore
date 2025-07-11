@@ -1,0 +1,9 @@
+# Terraform cache
+.terraform/
+
+# Terraform state
+terraform.tfstate
+terraform.tfstate.backup
+
+# Sensible Variablen
+terraform.tfvars
