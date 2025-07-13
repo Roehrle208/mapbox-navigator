@@ -21,7 +21,7 @@ provider "github" {
 }
 
 resource "github_repository" "mapbox_repo" {
-  name        = "mapbox_navigator"
+  name        = "mapbox-navigator"
   description = "Ein Beispiel-Repo über Terraform erstellt"
   visibility  = "public"
 }
