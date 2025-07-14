@@ -1,0 +1,14 @@
+{
+  "name": "TypeScript Node (WebStorm)",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye",
+  "remoteUser": "node",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "postStartCommand": "sudo chown -R node:node /workspace && sudo chown -R node:node /workspace/mapbox-ui && sudo chown -R node:node /home/node && sudo chown -R node:node /usr/local/share/.config && sudo chown -R node:node /usr/local/lib/node_modules",
+  "features": {},
+  "customizations": {
+    "jetbrains": {
+      "ide": "WebStorm"
+    }
+  }
+}
