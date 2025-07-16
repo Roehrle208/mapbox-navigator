@@ -44,3 +44,10 @@ resource "vercel_project" "mapbox_ui" {
     repo = "Roehrle208/mapbox-navigator"
   }
 }
+
+resource "vercel_project_environment_variable" "mapbox_token" {
+  project_id = vercel_project.mapbox_ui.id
+  key        = "VITE_MAPBOX_ACCESS_TOKEN"
+  value      = var.MAPBOX_TOKEN
+  target     = ["production", "preview", "development"]
+}

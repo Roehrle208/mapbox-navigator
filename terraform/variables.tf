@@ -3,3 +3,9 @@ variable "VERCEL_TOKEN" {
   type        = string
   sensitive   = true
 }
+
+variable "MAPBOX_TOKEN" {
+  description = "Access token for Mapbox"
+  type        = string
+  sensitive   = true
+}
