@@ -37,6 +37,7 @@ resource "github_repository" "mapbox_repo" {
 resource "vercel_project" "mapbox_ui" {
   name      = "mapbox-navigator"
   framework = "vite"
+  root_directory = "mapbox-ui"
   
   git_repository = {
     type = "github"
